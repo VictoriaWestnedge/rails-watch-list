@@ -1,0 +1,15 @@
+<div class="container">
+<div class="row">
+<div class="mt-3">
+<div>
+<div class="mb-3">
+<h3>Movie Lists</h3>
+</div>
+<ul>
+<h3><% @lists.each do |list| %></h3>
+<li><%= list.name %></li><%= link_to "More information", list_path(list), class: "btn btn-link"%>
+<% end %>
+</ul>
+<div class="mb-3">
+<%= link_to("Add new list", new_list_path, class: "btn btn-primary") %>
+</div>
